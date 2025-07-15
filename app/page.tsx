@@ -108,13 +108,13 @@ export default function Portfolio() {
 
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-14 items-center justify-between">
+        <div className="container px-4 sm:px-6 lg:px-8 flex h-14 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <span className="font-bold text-sm sm:text-base">Darachin Kong</span>
             </Link>
           </div>
-
+      
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
             <Link href="#about" className="transition-colors hover:text-foreground/80">
@@ -133,7 +133,7 @@ export default function Portfolio() {
               Contact
             </Link>
           </nav>
-
+      
           {/* Mobile Menu Button */}
           <Button variant="ghost" size="sm" className="md:hidden">
             <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,6 +142,7 @@ export default function Portfolio() {
           </Button>
         </div>
       </header>
+
 
       {/* Hero Section */}
       <section className="container px-4 py-16 sm:py-24 md:py-32">
