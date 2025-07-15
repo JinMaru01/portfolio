@@ -20,53 +20,169 @@ import Link from "next/link"
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+      {/* Background Pattern Overlay */}
+      <div className="absolute inset-0 opacity-5">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23000000' fillOpacity='0.1'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3Ccircle cx='53' cy='7' r='1'/%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3Ccircle cx='7' cy='53' r='1'/%3E%3Ccircle cx='53' cy='53' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
+      </div>
+
+      {/* Neural Network Background Elements */}
+      <div className="absolute inset-0 opacity-10">
+        {/* Top Left Network */}
+        <svg className="absolute top-10 left-10 w-32 h-32 text-blue-600" viewBox="0 0 100 100">
+          <circle cx="20" cy="20" r="2" fill="currentColor" />
+          <circle cx="50" cy="30" r="2" fill="currentColor" />
+          <circle cx="80" cy="20" r="2" fill="currentColor" />
+          <circle cx="35" cy="60" r="2" fill="currentColor" />
+          <circle cx="65" cy="70" r="2" fill="currentColor" />
+          <line x1="20" y1="20" x2="50" y2="30" stroke="currentColor" strokeWidth="0.5" />
+          <line x1="50" y1="30" x2="80" y2="20" stroke="currentColor" strokeWidth="0.5" />
+          <line x1="20" y1="20" x2="35" y2="60" stroke="currentColor" strokeWidth="0.5" />
+          <line x1="50" y1="30" x2="35" y2="60" stroke="currentColor" strokeWidth="0.5" />
+          <line x1="50" y1="30" x2="65" y2="70" stroke="currentColor" strokeWidth="0.5" />
+          <line x1="80" y1="20" x2="65" y2="70" stroke="currentColor" strokeWidth="0.5" />
+        </svg>
+
+        {/* Top Right Data Flow */}
+        <svg className="absolute top-20 right-20 w-40 h-24 text-indigo-600" viewBox="0 0 120 60">
+          <rect x="10" y="20" width="15" height="8" rx="2" fill="currentColor" opacity="0.6" />
+          <rect x="35" y="15" width="15" height="8" rx="2" fill="currentColor" opacity="0.7" />
+          <rect x="35" y="25" width="15" height="8" rx="2" fill="currentColor" opacity="0.5" />
+          <rect x="60" y="20" width="15" height="8" rx="2" fill="currentColor" opacity="0.8" />
+          <rect x="85" y="20" width="15" height="8" rx="2" fill="currentColor" opacity="0.6" />
+
+          <path d="M25 24 L35 19" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.4" />
+          <path d="M25 24 L35 29" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.4" />
+          <path d="M50 19 L60 24" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.4" />
+          <path d="M50 29 L60 24" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.4" />
+          <path d="M75 24 L85 24" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.4" />
+        </svg>
+
+        {/* Bottom Left Pipeline */}
+        <svg className="absolute bottom-32 left-16 w-36 h-20 text-blue-500" viewBox="0 0 120 50">
+          <circle cx="15" cy="25" r="6" fill="currentColor" opacity="0.3" />
+          <circle cx="45" cy="25" r="6" fill="currentColor" opacity="0.4" />
+          <circle cx="75" cy="25" r="6" fill="currentColor" opacity="0.5" />
+          <circle cx="105" cy="25" r="6" fill="currentColor" opacity="0.6" />
+
+          <path d="M21 25 L39 25" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.3" />
+          <path d="M51 25 L69 25" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.3" />
+          <path d="M81 25 L99 25" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.3" />
+
+          <polygon points="37,23 37,27 41,25" fill="currentColor" opacity="0.3" />
+          <polygon points="67,23 67,27 71,25" fill="currentColor" opacity="0.3" />
+          <polygon points="97,23 97,27 101,25" fill="currentColor" opacity="0.3" />
+        </svg>
+
+        {/* Bottom Right Model Architecture */}
+        <svg className="absolute bottom-20 right-12 w-32 h-32 text-indigo-500" viewBox="0 0 100 100">
+          <rect x="10" y="10" width="80" height="8" rx="4" fill="currentColor" opacity="0.2" />
+          <rect x="15" y="25" width="70" height="8" rx="4" fill="currentColor" opacity="0.3" />
+          <rect x="20" y="40" width="60" height="8" rx="4" fill="currentColor" opacity="0.4" />
+          <rect x="25" y="55" width="50" height="8" rx="4" fill="currentColor" opacity="0.5" />
+          <rect x="30" y="70" width="40" height="8" rx="4" fill="currentColor" opacity="0.6" />
+          <rect x="40" y="85" width="20" height="8" rx="4" fill="currentColor" opacity="0.7" />
+        </svg>
+      </div>
+
+      {/* Floating Code Elements */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 text-xs font-mono text-gray-600 transform -rotate-12">
+          {"model.fit(X_train, y_train)"}
+        </div>
+        <div className="absolute top-1/3 right-1/4 text-xs font-mono text-gray-600 transform rotate-6">
+          {"kubectl apply -f deployment.yaml"}
+        </div>
+        <div className="absolute bottom-1/3 left-1/3 text-xs font-mono text-gray-600 transform rotate-3">
+          {'mlflow.log_metric("accuracy", 0.95)'}
+        </div>
+        <div className="absolute bottom-1/4 right-1/3 text-xs font-mono text-gray-600 transform -rotate-6">
+          {"docker build -t ml-model:latest ."}
+        </div>
+      </div>
+
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-14 items-center">
-          <div className="mr-4 flex">
-            <Link href="/" className="mr-6 flex items-center space-x-2">
-              <Code className="h-6 w-6" />
-              <span className="font-bold">Darachin Kong</span>
+      <header className="sticky top-0 z-50 w-full border-b border-gray-200/50 bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/60 shadow-sm">
+        <div className="container flex h-16 items-center justify-between px-4">
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+              <Code className="h-6 w-6 text-blue-600" />
+              <span className="font-bold text-sm sm:text-base text-gray-900">Darachin Kong</span>
             </Link>
           </div>
-          <nav className="flex items-center space-x-6 text-sm font-medium">
-            <Link href="#about" className="transition-colors hover:text-foreground/80">
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
+            <Link
+              href="#about"
+              className="text-gray-600 hover:text-blue-600 transition-colors duration-200 relative group"
+            >
               About
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
             </Link>
-            <Link href="#experience" className="transition-colors hover:text-foreground/80">
+            <Link
+              href="#experience"
+              className="text-gray-600 hover:text-blue-600 transition-colors duration-200 relative group"
+            >
               Experience
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
             </Link>
-            <Link href="#projects" className="transition-colors hover:text-foreground/80">
+            <Link
+              href="#projects"
+              className="text-gray-600 hover:text-blue-600 transition-colors duration-200 relative group"
+            >
               Projects
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
             </Link>
-            <Link href="#skills" className="transition-colors hover:text-foreground/80">
+            <Link
+              href="#skills"
+              className="text-gray-600 hover:text-blue-600 transition-colors duration-200 relative group"
+            >
               Skills
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
             </Link>
-            <Link href="#contact" className="transition-colors hover:text-foreground/80">
+            <Link
+              href="#contact"
+              className="text-gray-600 hover:text-blue-600 transition-colors duration-200 relative group"
+            >
               Contact
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
             </Link>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <Button variant="ghost" size="sm" className="md:hidden hover:bg-gray-100">
+            <svg className="h-5 w-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </Button>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="container py-24 md:py-32">
-        <div className="flex flex-col items-center text-center space-y-8">
+      <section className="container px-4 py-16 sm:py-24 md:py-32">
+        <div className="flex flex-col items-center text-center space-y-6 sm:space-y-8">
           <div className="space-y-4">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">Darachin Kong</h1>
-            <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+              Darachin Kong
+            </h1>
+            <p className="mx-auto max-w-[700px] text-gray-500 text-base sm:text-lg md:text-xl px-4">
               MLOps Engineer at Wing Bank. Currently exploring centralized ML model inference, drift detection, and
               automated retraining systems. Specializing in production-ready ML operations and intelligent financial
               services solutions.
             </p>
           </div>
-          <div className="flex space-x-4">
-            <Button size="lg">
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <Button size="lg" className="w-full sm:w-auto">
               <Mail className="mr-2 h-4 w-4" />
               Get In Touch
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" className="w-full sm:w-auto bg-transparent">
               <Github className="mr-2 h-4 w-4" />
               View GitHub
             </Button>
@@ -75,44 +191,44 @@ export default function Portfolio() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="container py-16">
+      <section id="about" className="container px-4 py-12 sm:py-16">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold tracking-tighter mb-8">About Me</h2>
-          <div className="grid gap-8 md:grid-cols-2">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter mb-6 sm:mb-8">About Me</h2>
+          <div className="grid gap-6 sm:gap-8 lg:grid-cols-2">
             <div className="space-y-4">
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                 I'm a passionate MLOps Engineer currently working at Wing Bank in Cambodia with hands-on experience in
                 developing ML-powered solutions for financial services. Currently exploring advanced MLOps tools for
                 centralized machine learning model inference, automated drift detection, and model retraining systems to
                 ensure robust production ML operations.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                 My expertise includes API development with Flask, MLflow for experiment tracking, and developing NLP
                 solutions using pretrained models like DistilBERT. I'm passionate about building resilient, self-healing
                 ML systems that maintain performance and accuracy in production environments.
               </p>
             </div>
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Core Competencies</h3>
-              <ul className="space-y-2 text-gray-600">
+              <h3 className="text-lg sm:text-xl font-semibold">Core Competencies</h3>
+              <ul className="space-y-2 text-gray-600 text-sm sm:text-base">
                 <li className="flex items-center">
-                  <Zap className="mr-2 h-4 w-4 text-blue-500" />
+                  <Zap className="mr-2 h-4 w-4 text-blue-500 flex-shrink-0" />
                   ML Pipeline Automation
                 </li>
                 <li className="flex items-center">
-                  <Cloud className="mr-2 h-4 w-4 text-blue-500" />
+                  <Cloud className="mr-2 h-4 w-4 text-blue-500 flex-shrink-0" />
                   Cloud Infrastructure (AWS, GCP, Azure)
                 </li>
                 <li className="flex items-center">
-                  <Server className="mr-2 h-4 w-4 text-blue-500" />
+                  <Server className="mr-2 h-4 w-4 text-blue-500 flex-shrink-0" />
                   Container Orchestration (Docker, Kubernetes)
                 </li>
                 <li className="flex items-center">
-                  <Monitor className="mr-2 h-4 w-4 text-blue-500" />
+                  <Monitor className="mr-2 h-4 w-4 text-blue-500 flex-shrink-0" />
                   Model Monitoring & Observability
                 </li>
                 <li className="flex items-center">
-                  <Shield className="mr-2 h-4 w-4 text-blue-500" />
+                  <Shield className="mr-2 h-4 w-4 text-blue-500 flex-shrink-0" />
                   CI/CD for ML Systems
                 </li>
               </ul>
@@ -122,10 +238,25 @@ export default function Portfolio() {
       </section>
 
       {/* Current Focus Section */}
-      <section className="container py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
+      <section className="container px-4 py-12 sm:py-16 bg-gradient-to-r from-blue-50/80 via-indigo-50/80 to-purple-50/80 backdrop-blur-sm relative">
+        {/* Section-specific background pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <svg className="absolute top-4 right-4 w-24 h-24 text-blue-600" viewBox="0 0 100 100">
+            <circle cx="50" cy="20" r="3" fill="currentColor" />
+            <circle cx="20" cy="50" r="3" fill="currentColor" />
+            <circle cx="80" cy="50" r="3" fill="currentColor" />
+            <circle cx="50" cy="80" r="3" fill="currentColor" />
+            <line x1="50" y1="20" x2="20" y2="50" stroke="currentColor" strokeWidth="1" />
+            <line x1="50" y1="20" x2="80" y2="50" stroke="currentColor" strokeWidth="1" />
+            <line x1="20" y1="50" x2="50" y2="80" stroke="currentColor" strokeWidth="1" />
+            <line x1="80" y1="50" x2="50" y2="80" stroke="currentColor" strokeWidth="1" />
+          </svg>
+        </div>
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold tracking-tighter mb-8 text-center">Current Focus & Research</h2>
-          <div className="grid gap-6 md:grid-cols-3">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter mb-6 sm:mb-8 text-center">
+            Current Focus & Research
+          </h2>
+          <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
             <Card className="border-blue-200 hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle className="flex items-center text-blue-700">
@@ -193,10 +324,19 @@ export default function Portfolio() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="container py-16 bg-white">
+      <section id="experience" className="container px-4 py-12 sm:py-16 bg-white/90 backdrop-blur-sm relative">
+        {/* Subtle grid pattern for experience section */}
+        <div className="absolute inset-0 opacity-5">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fillOpacity='0.05'%3E%3Cpath d='M0 0h40v40H0V0zm20 20h20v20H20V20z'/%3E%3C/g%3E%3C/svg%3E")`,
+            }}
+          />
+        </div>
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold tracking-tighter mb-8">Experience</h2>
-          <div className="space-y-8">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter mb-6 sm:mb-8">Experience</h2>
+          <div className="space-y-6 sm:space-y-8">
             <Card>
               <CardHeader>
                 <div className="flex justify-between items-start">
@@ -280,10 +420,10 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="container py-16">
+      <section id="projects" className="container px-4 py-12 sm:py-16">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold tracking-tighter mb-8">Featured Projects</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter mb-6 sm:mb-8">Featured Projects</h2>
+          <div className="grid gap-4 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle className="flex items-center">
@@ -504,7 +644,6 @@ export default function Portfolio() {
                   <GitBranch className="mr-2 h-5 w-5" />
                   ML CI/CD
                 </CardTitle>
-                <CardDescription>Continuous integration and deployment pipeline for ML models</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -534,7 +673,6 @@ export default function Portfolio() {
                   <Shield className="mr-2 h-5 w-5" />
                   ML Security
                 </CardTitle>
-                <CardDescription>Security framework for ML models including adversarial detection</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -562,10 +700,10 @@ export default function Portfolio() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="container py-16 bg-white">
+      <section id="skills" className="container px-4 py-12 sm:py-16 bg-white">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold tracking-tighter mb-8">Technical Skills</h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter mb-6 sm:mb-8">Technical Skills</h2>
+          <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div>
               <h3 className="text-lg font-semibold mb-4 flex items-center">
                 <Code className="mr-2 h-5 w-5" />
@@ -657,23 +795,23 @@ export default function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="container py-16">
+      <section id="contact" className="container px-4 py-12 sm:py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tighter mb-8">Get In Touch</h2>
-          <p className="text-gray-600 mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter mb-6 sm:mb-8">Get In Touch</h2>
+          <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base px-4">
             I'm always interested in discussing new opportunities, innovative projects, or just chatting about the
             latest in MLOps and machine learning infrastructure.
           </p>
-          <div className="flex justify-center space-x-4">
-            <Button size="lg">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button size="lg" className="w-full sm:w-auto">
               <Mail className="mr-2 h-4 w-4" />
               Email Me
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" className="w-full sm:w-auto bg-transparent">
               <Linkedin className="mr-2 h-4 w-4" />
               LinkedIn
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" className="w-full sm:w-auto bg-transparent">
               <Github className="mr-2 h-4 w-4" />
               GitHub
             </Button>
@@ -682,8 +820,8 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t py-8">
-        <div className="container text-center text-gray-600">
+      <footer className="border-t py-6 sm:py-8">
+        <div className="container px-4 text-center text-gray-600 text-sm sm:text-base">
           <p>&copy; 2024 Darachin Kong. MLOps Engineer Portfolio.</p>
         </div>
       </footer>
