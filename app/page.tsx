@@ -158,14 +158,18 @@ export default function Portfolio() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Button size="lg" className="w-full sm:w-auto">
-              <Mail className="mr-2 h-4 w-4" />
-              Get In Touch
-            </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto bg-transparent">
-              <Github className="mr-2 h-4 w-4" />
-              View GitHub
-            </Button>
+            <a href="mailto:rachinkong@gmail.com" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="w-full sm:w-auto">
+                <Mail className="mr-2 h-4 w-4" />
+                Get In Touch
+              </Button>
+            </a>
+            <a href="https://github.com/JinMaru01" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto bg-transparent">
+                <Github className="mr-2 h-4 w-4" />
+                View GitHub
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -783,20 +787,27 @@ export default function Portfolio() {
             latest in MLOps and machine learning infrastructure.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="w-full sm:w-auto">
-              <Mail className="mr-2 h-4 w-4" />
-              Email Me
-            </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto bg-transparent">
-              <Linkedin className="mr-2 h-4 w-4" />
-              LinkedIn
-            </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto bg-transparent">
-              <Github className="mr-2 h-4 w-4" />
-              GitHub
-            </Button>
+            <a href="mailto:rachinkong@gmail.com" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="w-full sm:w-auto">
+                <Mail className="mr-2 h-4 w-4" />
+                Email Me
+              </Button>
+            </a>
+            <a href="https://www.linkedin.com/in/jinmaruhhh" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto bg-transparent">
+                <Linkedin className="mr-2 h-4 w-4" />
+                LinkedIn
+              </Button>
+            </a>
+            <a href="https://github.com/JinMaru01" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto bg-transparent">
+                <Github className="mr-2 h-4 w-4" />
+                GitHub
+              </Button>
+            </a>
           </div>
         </div>
+
       </section>
 
       {/* Footer */}
